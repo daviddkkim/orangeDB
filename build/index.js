@@ -1,5 +1,7 @@
-"use strict";
-console.log('Hello world!12312');
-console.error("hello?");
-const x = 10;
-console.log(x);
+import { InMemoryStorage } from "./storage/InMemoryStorage";
+const storage = new InMemoryStorage();
+console.log(storage.data);
+storage.push("haha");
+console.log(storage.data);
+storage.pop();
+console.log(storage.data);

@@ -1,5 +1,10 @@
-console.log('Hello world!12312')
-console.error("hello?")
+import { InMemoryStorage } from "./storage/InMemoryStorage";
 
-const x = 10;
-console.log(x);
+
+const storage = new InMemoryStorage();
+
+console.log(storage.data);
+storage.push("haha")
+console.log(storage.data);
+storage.pop()
+console.log(storage.data);
