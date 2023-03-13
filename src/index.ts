@@ -3,8 +3,8 @@ import { InMemoryStorage } from "./storage/InMemoryStorage";
 
 const storage = new InMemoryStorage();
 
-console.log(storage.data);
+console.log(storage.list());
 storage.push("haha")
-console.log(storage.data);
+console.log(storage.list());
 storage.pop()
-console.log(storage.data);
+console.log(storage.list());

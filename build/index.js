@@ -1,7 +1,9 @@
-import { InMemoryStorage } from "./storage/InMemoryStorage";
-const storage = new InMemoryStorage();
-console.log(storage.data);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const InMemoryStorage_1 = require("./storage/InMemoryStorage");
+const storage = new InMemoryStorage_1.InMemoryStorage();
+console.log(storage.list());
 storage.push("haha");
-console.log(storage.data);
+console.log(storage.list());
 storage.pop();
-console.log(storage.data);
+console.log(storage.list());

@@ -1,17 +1,22 @@
+import type { Data } from "./types";
+
 export class InMemoryStorage {
 
-  data: any[]
+  #data: Data[]
 
-  constructor(data?: any[]) {
-    this.data = data ? data : []
+  constructor(data?: Data[]) {
+    this.#data = data ? data : []
   }
 
-  push(data: any[] | any) {
-    this.data.push(data);
+  push(data: Data[] | Data) {
+    this.#data.push(data);
   }
 
   pop() {
-    this.data.pop()
+    this.#data.pop()
   }
 
+  list() {
+    return this.#data
+  }
 }
